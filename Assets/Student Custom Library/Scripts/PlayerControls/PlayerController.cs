@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         inputActions.Enable();
         inputActions.Player.Movement.performed += ctx => SetMoveDirection(ctx.ReadValue<Vector2>());
         inputActions.Player.Movement.canceled += ctx => moveDirection = 0f;
-        Debug.Log("rotate");
+        Debug.Log("OnEnanble in PC is triggerd");
     }
 
     private void OnDisable()
