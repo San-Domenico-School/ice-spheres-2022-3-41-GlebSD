@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 121292645}
   - component: {fileID: 121292644}
   - component: {fileID: 121292643}
+  - component: {fileID: 121292648}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -285,13 +286,25 @@ Transform:
   m_GameObject: {fileID: 121292642}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4692602, y: -0.38018703, z: 1.7188435}
+  m_LocalPosition: {x: 0, y: 25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2119149831}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &121292648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121292642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ff539a3eb1a4d63a136e9525d8f522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &245963551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -399,6 +412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 853509751}
+  - component: {fileID: 853509752}
   m_Layer: 0
   m_Name: Focal Point
   m_TagString: Untagged
@@ -422,6 +436,19 @@ Transform:
   - {fileID: 1211419928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &853509752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853509750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a156d4cf446451a8638809c072e778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 50
 --- !u!1 &1168981994
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1168981995}
+  - component: {fileID: 1168981996}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -453,6 +481,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168981996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168981994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b6f2a6b0728475c8d9c5c4d01c0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScale: {x: 1.25, y: 1.25, z: 1.25}
+  playerMass: 10
+  playerDrag: 0.7
+  playerMoveForce: 35
+  playerRepelForce: 0.75
+  playerBounce: 0.75
+  waypoints: []
+  debugSpawnWaves: 0
+  debugSpawnPortal: 0
+  debugSpawnPowerUp: 0
+  debugPowerUpRepel: 0
 --- !u!1 &1211016355
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +650,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
